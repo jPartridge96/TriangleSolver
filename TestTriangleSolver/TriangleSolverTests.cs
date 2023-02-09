@@ -154,9 +154,9 @@ namespace TestTriangleSolver
         }
         #endregion
 
-        #region ZERO_LENGTH
+        #region ZERO
         [Test]
-        public void triangle_a0b1c1_expectInvalid()
+        public void triangle_a0b1c1_expectZero()
         {
             // Arrange
             int a = 0;
@@ -171,7 +171,7 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a1b0c1_expectInvalid()
+        public void triangle_a1b0c1_expectZero()
         {
             // Arrange
             int a = 0;
@@ -186,12 +186,59 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a1b1c0_expectInvalid()
+        public void triangle_a1b1c0_expectZero()
         {
             // Arrange
             int a = 0;
             int b = 1;
             string expected = "At least one side of your triangle has a zero length and is thus invalid";
+
+            // Act
+            string actual = t.AnalyzeTriangle(b, b, a);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        #endregion
+
+        #region INVALID_RESPONSE
+        [Test]
+        public void triangle_aN1b1c1_expectInvalid()
+        {
+            // Arrange
+            int a = -1;
+            int b = 1;
+            string expected = "Based on the values entered, the triangle is INVALID";
+
+            // Act
+            string actual = t.AnalyzeTriangle(a, b, b);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void triangle_a1bN1c1_expectInvalid()
+        {
+            // Arrange
+            int a = -1;
+            int b = 1;
+            string expected = "Based on the values entered, the triangle is INVALID";
+
+            // Act
+            string actual = t.AnalyzeTriangle(b, a, b);
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void triangle_a1b1cN1_expectInvalid()
+        {
+            // Arrange
+            int a = -1;
+            int b = 1;
+            string expected = "Based on the values entered, the triangle is INVALID";
 
             // Act
             string actual = t.AnalyzeTriangle(b, b, a);
