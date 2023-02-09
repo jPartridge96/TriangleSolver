@@ -73,7 +73,7 @@ namespace TestTriangleSolver
 
         #region SCALENE
         [Test]
-        public void triangle_a1b2c3_expectScalene()
+        public void triangle_a2b3c4_expectScalene()
         {
             // Arrange
             int a = 2;
@@ -89,7 +89,7 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a2b3c1_expectScalene()
+        public void triangle_a3b4c2_expectScalene()
         {
             // Arrange
             int a = 2;
@@ -105,7 +105,7 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a3b1c2_expectScalene()
+        public void triangle_a4b2c3_expectScalene()
         {
             // Arrange
             int a = 2;
@@ -121,7 +121,7 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a1b3c2_expectScalene()
+        public void triangle_a2b4c3_expectScalene()
         {
             // Arrange
             int a = 2;
@@ -137,7 +137,7 @@ namespace TestTriangleSolver
         }
 
         [Test]
-        public void triangle_a2b1c3_expectScalene()
+        public void triangle_a3b2c4_expectScalene()
         {
             // Arrange
             int a = 2;
