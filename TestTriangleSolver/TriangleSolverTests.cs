@@ -1,5 +1,4 @@
 ﻿using NUnit.Framework;
-using System.Runtime.InteropServices;
 using TriangleSolver;
 
 namespace TestTriangleSolver
@@ -77,9 +76,9 @@ namespace TestTriangleSolver
         public void triangle_a1b2c3_expectScalene()
         {
             // Arrange
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            int a = 2;
+            int b = 3;
+            int c = 4;
             string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
 
             // Act
@@ -93,9 +92,9 @@ namespace TestTriangleSolver
         public void triangle_a2b3c1_expectScalene()
         {
             // Arrange
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            int a = 2;
+            int b = 3;
+            int c = 4;
             string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
 
             // Act
@@ -109,9 +108,9 @@ namespace TestTriangleSolver
         public void triangle_a3b1c2_expectScalene()
         {
             // Arrange
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            int a = 2;
+            int b = 3;
+            int c = 4;
             string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
 
             // Act
@@ -125,9 +124,9 @@ namespace TestTriangleSolver
         public void triangle_a1b3c2_expectScalene()
         {
             // Arrange
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            int a = 2;
+            int b = 3;
+            int c = 4;
             string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
 
             // Act
@@ -141,9 +140,9 @@ namespace TestTriangleSolver
         public void triangle_a2b1c3_expectScalene()
         {
             // Arrange
-            int a = 1;
-            int b = 2;
-            int c = 3;
+            int a = 2;
+            int b = 3;
+            int c = 4;
             string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
 
             // Act
